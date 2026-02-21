@@ -20,8 +20,26 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lotto Number Generator</title>
+    <title>Lotto Number Generator - 오늘의 행운 번호</title>
+    <meta name="description" content="클릭 한 번으로 생성하는 행운의 로또 번호! 지금 바로 확인해보세요.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://greensun00-svg.github.io/product-builder-test/">
+    <meta property="og:title" content="Lotto Number Generator - 오늘의 행운 번호">
+    <meta property="og:description" content="클릭 한 번으로 생성하는 행운의 로또 번호! 지금 바로 확인해보세요.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1596838132731-9a9972828b12?auto=format&fit=crop&q=80&w=1200">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://greensun00-svg.github.io/product-builder-test/">
+    <meta property="twitter:title" content="Lotto Number Generator - 오늘의 행운 번호">
+    <meta property="twitter:description" content="클릭 한 번으로 생성하는 행운의 로또 번호! 지금 바로 확인해보세요.">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1596838132731-9a9972828b12?auto=format&fit=crop&q=80&w=1200">
+
     <link rel="stylesheet" href="style.css">
+    <!-- Kakao SDK -->
+    <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.0/kakao.min.js" integrity="sha384-l68798WNn00m8v+8/iV7W72uW975yCq9Bf2zEa4j8t9f3Yj0g+q9Bf2zEa4j8t9f" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
@@ -31,6 +49,24 @@
         <h1>Lotto Number Generator</h1>
         <div id="numbers-display" class="numbers-display"></div>
         <button id="generate-button" class="generate-button">Generate Numbers</button>
+        
+        <div class="share-section">
+            <p>친구에게 행운을 공유하세요!</p>
+            <div class="share-buttons">
+                <button id="share-kakao" class="share-btn kakao" aria-label="Share on KakaoTalk">
+                    <span class="icon">💬</span>
+                </button>
+                <button id="share-twitter" class="share-btn twitter" aria-label="Share on Twitter">
+                    <span class="icon">𝕏</span>
+                </button>
+                <button id="share-facebook" class="share-btn facebook" aria-label="Share on Facebook">
+                    <span class="icon">f</span>
+                </button>
+                <button id="share-copy" class="share-btn copy" aria-label="Copy Link">
+                    <span class="icon">🔗</span>
+                </button>
+            </div>
+        </div>
     </div>
 
     <div class="container partnership-section">
