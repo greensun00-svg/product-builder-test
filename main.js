@@ -1,7 +1,23 @@
-
 document.addEventListener('DOMContentLoaded', () => {
     const generateButton = document.getElementById('generate-button');
     const numbersDisplay = document.getElementById('numbers-display');
+    const themeToggleButton = document.getElementById('theme-toggle-button');
+    const body = document.body;
+
+    // Check for saved theme preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        body.classList.add('dark-mode');
+        themeToggleButton.textContent = '☀️';
+    }
+
+    // Theme toggle functionality
+    themeToggleButton.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        const isDarkMode = body.classList.contains('dark-mode');
+        themeToggleButton.textContent = isDarkMode ? '☀️' : '🌙';
+        localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+    });
 
     generateButton.addEventListener('click', () => {
         generateLottoNumbers();
